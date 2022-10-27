@@ -2,9 +2,9 @@ import { useEffect } from "react"
 import { useState } from "react"
 import  ItemCard  from './ItemCard'
 
-function Home() {
-    
-    const [newItems, setItems] = useState([])
+function Items(props) {
+    const { setItems, newItems } = props;
+
     const [isLoading, setIsLoading] = useState(true);
 
 useEffect(() => {
@@ -15,21 +15,23 @@ useEffect(() => {
         setItems(items)
         setIsLoading(false)
     })
-}, [])
+}, [setItems])
 
 if (isLoading) return <p>Loading...</p>
 
 return (
-    <div>
+    <div className="item-list">
+
         {newItems.map((item) => {
-            return (<ul>
+            return (
             <ItemCard key={item.item_id} item={item}/>
-            </ul>
+   
             )
         })}
+
     </div>
 )
 
 }
 
-export default Home
+export default Items
