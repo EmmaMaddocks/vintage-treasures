@@ -1,7 +1,7 @@
 import { FaShoppingCart, FaInfoCircle } from "react-icons/fa";
 
 
-function ItemCard({ item }) {
+function ItemCard({item, addToCart, cart}) {
     const { item_name, price, img_url, item_id } = item
 
     return ( 
@@ -13,7 +13,10 @@ function ItemCard({ item }) {
             <p>£{price}</p>
             <div>
             <a><FaInfoCircle size={30} className='react-icon'/></a>   
-            <a><FaShoppingCart size={30} className='react-icon'/></a>   
+            <button onClick={() => 
+            addToCart([...cart, (item)])
+            }>
+                <FaShoppingCart size={30} className='react-icon'/></button>   
             </div>
             </div>
         </li>

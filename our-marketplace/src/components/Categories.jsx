@@ -6,13 +6,14 @@ import { Link } from "react-router-dom";
 import ItemCard from "./ItemCard";
 
 
-function Categories() {
+function Categories(props) {
+
+   const { cart, addToCart } = props;
 
     const { category } = useParams();
 
   const [categoryArr, setCategory] = useState([]);
 
-console.log(category)
 
   useEffect(() => {
     fetch(`https://fc-marketplace.herokuapp.com/api/items?category_name=${category}`)
@@ -27,7 +28,8 @@ console.log(category)
     <div className='item-list'>
 
         {categoryArr.map((item) => {
-          return <ItemCard key={item.item_id} item={item} />;
+          return (
+          <ItemCard key={item.item_id} item={item} cart={cart} addToCart={addToCart}/>)
         })}
 
     </div>

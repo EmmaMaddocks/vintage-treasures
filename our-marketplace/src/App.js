@@ -14,20 +14,21 @@ function App() {
     
   const [newItems, setItems] = useState([])
   const [categoryName, setCategoryName] = useState([])
+  const [cart, addToCart] = useState([]);
 
 
 
   return (
     <div className="App">
 
-      <Nav />
+      <Nav cart={cart} />
       <Title />
       < Routes >
-        <Route path='/' element = {<Items setItems={setItems} newItems={newItems}/>}/>
+        <Route path='/' element = {<Items setItems={setItems} newItems={newItems} addToCart={addToCart} cart={cart}/>}/>
         <Route path='/profile' element = {<Profile/>}/>
-        <Route path='/basket' element = {<Basket/>}/>
-        <Route path='/categories' element = {<CategoryNav categoryName={categoryName} setCategoryName={setCategoryName}/>}   />
-        <Route path='/categories/:category' element = {<Categories categoryName={categoryName} setCategoryName={setCategoryName}/>}   />
+        <Route path='/basket' element = {<Basket cart={cart} newItems={newItems} />}/>
+        <Route path='/categories' element = {<CategoryNav categoryName={categoryName} setCategoryName={setCategoryName} />}   />
+        <Route path='/categories/:category' element = {<Categories categoryName={categoryName} setCategoryName={setCategoryName} addToCart={addToCart} cart={cart}/>}   />
 
       </Routes>      
     </div>
