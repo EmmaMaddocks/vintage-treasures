@@ -19,8 +19,9 @@ function App() {
 
   return (
     <div className="App">
-      <Title />
+
       <Nav />
+      <Title />
       < Routes >
         <Route path='/' element = {<Items setItems={setItems} newItems={newItems}/>}/>
         <Route path='/profile' element = {<Profile/>}/>
