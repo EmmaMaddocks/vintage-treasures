@@ -22,10 +22,9 @@ const handleSubmit = (e) => {
 .then((newUser) => {
   setUsername('')
   setAvatar('')
-  {console.log(newUser.user.username)}
-  return setMessage(`The user ${newUser.user.username} has been created`)
+  setMessage(`The user ${newUser.user.username} has been created`)
 }).catch((err)=>{
-  return setMessage(`${err}, Your username is taken`)
+  setMessage(`Sorry, that username is already taken. Please try again`)
 })
 
     }
@@ -57,9 +56,10 @@ const handleSubmit = (e) => {
         <button type='submit' id='blue-btn-lrg' class="submit" >Submit Form</button>
         <button type="reset" id='white-btn-lrg' class="reset">Reset Form</button>
         </div>
-        <div class='err'>{message ? <p>{message}</p> : null}</div>
+  
         
     </form>
+    <div class='err'>{message ? <p>{message}</p> : null}</div>
     </div>
     </>
 )
