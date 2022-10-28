@@ -1,8 +1,9 @@
 //current items to buy
 import ItemCard from "./ItemCard";
 
-function Basket({cart}) {
+function Basket({cart, addToCart}) {
 
+//cart is an array of items
 
     return (
         <div className="basket-page">
@@ -12,7 +13,7 @@ function Basket({cart}) {
             {cart.map((item) => {
                 console.log(cart)
               return (
-              <ItemCard key={item.item_id} item={item} cart={cart} />)
+              <ItemCard key={item.item_id} item={item} cart={cart} addToCart={addToCart}/>)
             })}
     
         </div>

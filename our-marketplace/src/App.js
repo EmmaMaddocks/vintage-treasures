@@ -28,7 +28,7 @@ function App() {
       < Routes >
         <Route path='/' element = {<Items setItems={setItems} newItems={newItems} addToCart={addToCart} cart={cart}/>}/>
         <Route path='/profile' element = {<Profile/>}/>
-        <Route path='/basket' element = {<Basket cart={cart} newItems={newItems} />}/>
+        <Route path='/basket' element = {<Basket cart={cart} newItems={newItems}/>}/>
         <Route path='/categories' element = {<CategoryNav categoryName={categoryName} setCategoryName={setCategoryName} />}   />
         <Route path='/categories/:category' element = {<Categories categoryName={categoryName} setCategoryName={setCategoryName} addToCart={addToCart} cart={cart}/>}   />
 
