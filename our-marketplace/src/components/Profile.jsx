@@ -4,15 +4,29 @@
 //link to list a new item
 //link to previously ordered
 
+import { useNavigate } from "react-router-dom";
+
 
 function Profile({currentUser, setCurrentUser}) {
 
 
-return <>
-{console.log(currentUser)}
-    <h2>Welcome signed in user</h2>
-</>
-   
+    const navigate = useNavigate();
+
+    const handleClick = (e) => {
+        e.preventDefault()
+        setCurrentUser(null)
+            navigate("/signin");
+        
+        }
+        
+
+return (
+
+    <div className="container">
+    <h3>Welcome back {currentUser}!</h3>
+    <button onClick={handleClick} className='blue-btn-lrg'>Sign Out</button>
+    </div>
+)
    
 }
 
