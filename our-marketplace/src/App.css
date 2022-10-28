@@ -22,6 +22,11 @@ nav {
   
 }
 
+.sign-up {
+  margin: 0px 0px 0px 0px;
+  font-size: 28pt;
+}
+
 .nav-bar {
   display: flex;
   flex-direction: row;
@@ -39,7 +44,23 @@ nav {
   color: white;
 }
 
+#blue-btn-lrg {
+  background-color: rgb(8, 194, 211);
+  border: none;
+  padding: 15px 40px;
+  color: white;
+}
 
+#white-btn-lrg {
+  background-color:white;
+  border: 1px solid rgb(8, 194, 211);
+  padding: 15px 40px;
+  color: rgb(8, 194, 211)ite;
+}
+
+.err {
+  font-size: 19pt;
+}
 .category-menu {
   display: flex;
   flex-wrap: wrap;
@@ -240,6 +261,43 @@ footer {
 }
 
 
+.container {
+  margin: auto;
+  height: 300px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 15pt;
+  align-items: center;
+  gap: 5px;
+
+}
+
+.form-input {
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+}
+
+input {
+  border: none;
+  background-color: rgb(236, 236, 236);
+  border-radius: 0px;
+  width: 400px;
+  height: 40px;
+  margin-top: 10px;
+}
+
+label{
+  margin-top: 10px;
+}
+
+.sign-up-btns {
+  display: flex;
+  flex-direction: column;
+  justify-items: space-between;
+}
 
 @media only screen and (max-width: 600px) {
   h1 {

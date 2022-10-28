@@ -34,8 +34,8 @@ const handleSubmit = (e) => {
       return (
     <>
     <div class="container">
-      <h2>Sign up
-    </h2>
+      <h3 className='sign-up'>Sign up
+    </h3>
     <form onSubmit={handleSubmit}>
     <div class="form-input">
           <label htmlFor="userName">User Name</label>
@@ -53,9 +53,12 @@ const handleSubmit = (e) => {
           onChange={(e)=> setAvatar(e.target.value)}
            />
         </div>
-        <button type='submit' class="submit" >Submit Form</button>
-        <button type="reset" class="reset">Reset Form</button>
-        <div>{message ? <p>{message}</p> : null}</div>
+        <div class='sign-up-btns'>
+        <button type='submit' id='blue-btn-lrg' class="submit" >Submit Form</button>
+        <button type="reset" id='white-btn-lrg' class="reset">Reset Form</button>
+        </div>
+        <div class='err'>{message ? <p>{message}</p> : null}</div>
+        
     </form>
     </div>
     </>
