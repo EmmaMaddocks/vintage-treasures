@@ -31,6 +31,7 @@ function App() {
       {pathName === '/signup' ?
         <StandardHeader/>  :
       <HomeHeader/> }
+      <main>
       < Routes >
         <Route path='/' element = {<Items setItems={setItems} newItems={newItems} setCart={setCart} cart={cart}/>}/>
         <Route path='/profile' element = {<Profile currentUser={currentUser} setCurrentUser={setCurrentUser}/>}/>
@@ -40,6 +41,7 @@ function App() {
         <Route path='/signup' element = {<SignUp/>}/>
         <Route path='/signin' element = {<SignIn currentUser={currentUser} setCurrentUser={setCurrentUser}/>}/>
       </Routes> 
+      </main>
       <Footer />    
     </div>
   );

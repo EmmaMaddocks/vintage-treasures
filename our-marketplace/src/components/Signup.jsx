@@ -52,13 +52,14 @@ const handleSubmit = (e) => {
           onChange={(e)=> setAvatar(e.target.value)}
            />
         </div>
+   
         <div class='sign-up-btns'>
         <button type='submit' id='blue-btn-lrg' class="submit" >Submit Form</button>
         <button type="reset" id='white-btn-lrg' class="reset">Reset Form</button>
         </div>
-  
+        </form>
         
-    </form>
+
     <div class='err'>{message ? <p>{message}</p> : null}</div>
     </div>
     </>
