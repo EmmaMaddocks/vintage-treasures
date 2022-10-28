@@ -38,8 +38,8 @@ function App() {
         <Route path='/categories' element = {<CategoryNav categoryName={categoryName} setCategoryName={setCategoryName} />}   />
         <Route path='/categories/:category' element = {<Categories categoryName={categoryName} setCategoryName={setCategoryName} setCart={setCart} cart={cart}/>}   />
         <Route path='/signup' element = {<SignUp/>}/>
-        <Route path='/signin' element = {<SignIn/>}/>
-      </Routes>  
+        <Route path='/signin' element = {<SignIn currentUser={currentUser} setCurrentUser={setCurrentUser}/>}/>
+      </Routes> 
       <Footer />    
     </div>
   );
