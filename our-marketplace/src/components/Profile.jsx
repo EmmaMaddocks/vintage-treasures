@@ -4,8 +4,16 @@
 //link to list a new item
 //link to previously ordered
 
-function Profile() {
-    return <h1>you made it to the profile!</h1>
+
+function Profile({currentUser, setCurrentUser}) {
+
+
+return <>
+{console.log(currentUser)}
+    <h2>Welcome signed in user</h2>
+</>
+   
+   
 }
 
 export default Profile

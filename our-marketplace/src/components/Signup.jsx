@@ -1,14 +1,14 @@
 import { useState } from "react"
 
-
-
 function SignUp() {
 const [username, setUsername] = useState('')
 const [avatar, setAvatar] = useState('')
 const [message, setMessage] = useState('')
 
 const handleSubmit = (e) => {
-    e.preventDefault().then(fetch('https://fc-marketplace.herokuapp.com/api/users', {
+    e.preventDefault()
+
+    fetch('https://fc-marketplace.herokuapp.com/api/users', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -18,16 +18,16 @@ const handleSubmit = (e) => {
             "avatar_url": avatar
     
         }),
-    })).then((response) => response.json())
-.then((data) => {console.log(data)})
+    }).then((response) => response.json())
+.then((newUser) => {
+  setUsername('')
+  setAvatar('')
+  {console.log(newUser.user.username)}
+  return setMessage(`The user ${newUser.user.username} has been created`)
+}).catch((err)=>{
+  return setMessage(`${err}, Your username is taken`)
+})
 
-    //   if(response === 201) {
-    //     setUsername('');
-    //     setAvatar('');
-    //     setMessage('user created successfully');
-    //   } else {
-    //     setMessage('error')
-    //   }
     }
 
 
@@ -55,6 +55,7 @@ const handleSubmit = (e) => {
         </div>
         <button type='submit' class="submit" >Submit Form</button>
         <button type="reset" class="reset">Reset Form</button>
+        <div>{message ? <p>{message}</p> : null}</div>
     </form>
     </div>
     </>
