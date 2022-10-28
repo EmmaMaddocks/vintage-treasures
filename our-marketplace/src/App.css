@@ -4,6 +4,7 @@
 body {
 font-family: 'Montserrat', sans-serif;
 margin: 0 auto;
+height: 100%;
 }
 
 img {
@@ -44,6 +45,7 @@ nav {
   flex-wrap: wrap;
   justify-content: space-around;
   padding-top: 30px;
+  margin-bottom: 60px;
 
 }
 
@@ -102,6 +104,7 @@ top: 150px;
   color: white;
   text-decoration: none;
   margin-top: -10px;
+  margin-bottom: 30px;
 
 }
 
@@ -120,8 +123,7 @@ a, a:before, a:after, a:active {
   flex-wrap: wrap;
   justify-content: space-around;
   padding-top: 0px;
-  margin: 40px;
-  height: auto;
+  margin: 10px 40px;
 }
 
 
@@ -139,6 +141,10 @@ a, a:before, a:after, a:active {
   width: 250px;
 }
 
+.item-container {
+margin-bottom: 50px;
+}
+
 h2 {
   margin: 5px 5px 0px 5px;
   font-weight: 200;
@@ -151,8 +157,8 @@ h3{
   font-weight: 200;
   font-size: 28px;
   color: rgb(8, 194, 211);
-  margin-left: 80px;
-  padding-top: 30px;
+  margin: 50px 0px 0px 80px;
+
 }
 
 p {
@@ -186,6 +192,7 @@ h5 {
   justify-content: center;
   align-items: center;
   margin-bottom: 40px;
+
 }
 
 .basket-title {
@@ -194,13 +201,17 @@ font-size: 26pt;
 }
 
 footer {
-  height: 60px;
+  height: 40px;
   background-color: rgb(8, 194, 211);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 40px ;
+  padding: 10px 30px 10px 40px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+
 }
 
 .footer-icon {
@@ -210,7 +221,9 @@ footer {
 .footer-icon-container {
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  gap: 40px;
+  padding-right: 100px;
+
 }
 
 .footer-links {
@@ -218,7 +231,7 @@ footer {
   color: white;
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  gap: 40px;
 }
 
 .footer-link {
@@ -275,10 +288,17 @@ footer {
   footer {
     flex-direction: column-reverse;
     height: max-content;
-    padding-top: 20px;
+    padding: 10px 0px 10px 0px;
+    margin-top: 0px;
+    width: 100vw;
+
+  }
+
+  .footer-icon-container {
+    padding: 0;
   }
 
   .footer-links {
-    padding: 20px 0px;
+display: none;
   }
 }
