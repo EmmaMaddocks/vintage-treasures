@@ -158,3 +158,8 @@ p {
   color:rgb(8, 194, 211);
   margin-right: 10px;
 }
+
+.react-icon-btn {
+  background-color: white;
+  border: none;
+}

@@ -15,7 +15,7 @@ function ItemCard({item, addToCart, cart}) {
             <a><FaInfoCircle size={30} className='react-icon'/></a>   
             <button onClick={() => 
             addToCart([...cart, (item)])
-            }>
+            } className='react-icon-btn'>
                 <FaShoppingCart size={30} className='react-icon'/></button>   
             </div>
             </div>
