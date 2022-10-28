@@ -5,8 +5,8 @@ function Basket({cart}) {
 
 
     return (
-        <>
-        <h3>Your basket:</h3>
+        <div className="basket-page">
+        <h3 className="basket-title">Your basket</h3>
         <div className='item-list'>
     
             {cart.map((item) => {
@@ -16,7 +16,8 @@ function Basket({cart}) {
             })}
     
         </div>
-        </>
+        <button className="blue-btn-lrg">Complete purchase</button>
+        </div>
       );
     }
 

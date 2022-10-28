@@ -31,7 +31,7 @@ nav {
   background-color: white;
 }
 
-.hero-btn {
+.blue-btn-lrg {
   background-color: rgb(8, 194, 211);
   border: none;
   padding: 15px 40px;
@@ -179,6 +179,22 @@ h5 {
   display: none;
 }
 
+.basket-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.basket-title {
+margin: 0;
+font-size: 26pt;
+}
+
+
+
+
 @media only screen and (max-width: 600px) {
   h1 {
     font-size: 26px;
@@ -218,7 +234,7 @@ h5 {
     font-size: 28pt;
   }
 
-  h3 {
+  h3, .basket-title {
     padding: 0;
     margin: 30px 30px 0px 30px;
     text-align: center;
