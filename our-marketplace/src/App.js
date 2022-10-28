@@ -9,6 +9,7 @@ import Profile from './components/Profile'
 import Basket from './components/Basket'
 import CategoryNav from './components/CategoryNav';
 import Categories from './components/Categories';
+import Footer from './components/Footer';
 
 function App() {
     
@@ -23,6 +24,7 @@ function App() {
 
       <Nav cart={cart} />
       <Title />
+
       < Routes >
         <Route path='/' element = {<Items setItems={setItems} newItems={newItems} addToCart={addToCart} cart={cart}/>}/>
         <Route path='/profile' element = {<Profile/>}/>
@@ -30,7 +32,8 @@ function App() {
         <Route path='/categories' element = {<CategoryNav categoryName={categoryName} setCategoryName={setCategoryName} />}   />
         <Route path='/categories/:category' element = {<Categories categoryName={categoryName} setCategoryName={setCategoryName} addToCart={addToCart} cart={cart}/>}   />
 
-      </Routes>      
+      </Routes>  
+      <Footer />    
     </div>
   );
 }
