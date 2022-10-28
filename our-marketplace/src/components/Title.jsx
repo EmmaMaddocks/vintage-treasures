@@ -1,7 +1,7 @@
 function Title() {
     return <header>
         <div className="hero-box"> 
-        <h1>Declutter your home</h1>
+        <h2 class='hero-header'>Declutter your home</h2>
         <button className="hero-btn">Sign-up</button>
         </div>
     </header>
