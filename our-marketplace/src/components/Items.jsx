@@ -3,7 +3,7 @@ import { useState } from "react"
 import  ItemCard  from './ItemCard'
 
 function Items(props) {
-    const { setItems, newItems, cart, addToCart } = props;
+    const { setItems, newItems, cart, setCart } = props;
 
     const [isLoading, setIsLoading] = useState(true);
 
@@ -29,7 +29,7 @@ return (
 
         {newItems.map((item) => {
             return (
-            <ItemCard key={item.item_id} item={item} cart={cart} addToCart={addToCart}/>
+            <ItemCard key={item.item_id} item={item} cart={cart} setCart={setCart}/>
    
             )
         })}

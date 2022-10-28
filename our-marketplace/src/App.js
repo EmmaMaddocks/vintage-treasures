@@ -15,7 +15,7 @@ function App() {
     
   const [newItems, setItems] = useState([])
   const [categoryName, setCategoryName] = useState([])
-  const [cart, addToCart] = useState([]);
+  const [cart, setCart] = useState([]);
 
 
 
@@ -26,11 +26,11 @@ function App() {
       <Title />
 
       < Routes >
-        <Route path='/' element = {<Items setItems={setItems} newItems={newItems} addToCart={addToCart} cart={cart}/>}/>
+        <Route path='/' element = {<Items setItems={setItems} newItems={newItems} setCart={setCart} cart={cart}/>}/>
         <Route path='/profile' element = {<Profile/>}/>
-        <Route path='/basket' element = {<Basket cart={cart} newItems={newItems}/>}/>
+        <Route path='/basket' element = {<Basket cart={cart} newItems={newItems} setCart={setCart}/>}/>
         <Route path='/categories' element = {<CategoryNav categoryName={categoryName} setCategoryName={setCategoryName} />}   />
-        <Route path='/categories/:category' element = {<Categories categoryName={categoryName} setCategoryName={setCategoryName} addToCart={addToCart} cart={cart}/>}   />
+        <Route path='/categories/:category' element = {<Categories categoryName={categoryName} setCategoryName={setCategoryName} setCart={setCart} cart={cart}/>}   />
 
       </Routes>  
       <Footer />    

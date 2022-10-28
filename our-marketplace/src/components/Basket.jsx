@@ -1,9 +1,10 @@
 //current items to buy
+import { useEffect } from "react";
 import ItemCard from "./ItemCard";
 
-function Basket({cart, addToCart}) {
+function Basket({cart, setCart}) {
 
-//cart is an array of items
+
 
     return (
         <div className="basket-page">
@@ -11,9 +12,8 @@ function Basket({cart, addToCart}) {
         <div className='item-list'>
     
             {cart.map((item) => {
-                console.log(cart)
               return (
-              <ItemCard key={item.item_id} item={item} cart={cart} addToCart={addToCart}/>)
+              <ItemCard key={item.item_id} item={item} cart={cart} setCart={setCart}/>)
             })}
     
         </div>

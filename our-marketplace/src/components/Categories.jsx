@@ -7,7 +7,7 @@ import ItemCard from "./ItemCard";
 
 function Categories(props) {
 
-   const { cart, addToCart } = props;
+   const { cart, setCart } = props;
 
     const { category } = useParams();
 
@@ -28,7 +28,7 @@ function Categories(props) {
 
         {categoryArr.map((item) => {
           return (
-          <ItemCard key={item.item_id} item={item} cart={cart} addToCart={addToCart}/>)
+          <ItemCard key={item.item_id} item={item} cart={cart} setCart={setCart}/>)
         })}
 
     </div>
