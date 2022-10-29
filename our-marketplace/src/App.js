@@ -13,6 +13,9 @@ import Footer from './components/Footer';
 import SignUp from './components/Signup';
 import StandardHeader from './components/StandardHeader';
 import SignIn from './components/SignIn';
+import OrderConfirmation from './components/OrderConfirmation';
+import PreviousOrders from './components/PreviouslyOrdered';
+import FetchOrders from './components/FetchOrders';
 
 function App() {
     
@@ -35,11 +38,13 @@ function App() {
       < Routes >
         <Route path='/' element = {<Items setItems={setItems} newItems={newItems} setCart={setCart} cart={cart}/>}/>
         <Route path='/profile' element = {<Profile currentUser={currentUser} setCurrentUser={setCurrentUser}/>}/>
-        <Route path='/basket' element = {<Basket cart={cart} newItems={newItems} setCart={setCart}/>}/>
+        <Route path='/basket' element = {<Basket cart={cart} newItems={newItems} setCart={setCart} currentUser={currentUser}/>}/>
         <Route path='/categories' element = {<CategoryNav categoryName={categoryName} setCategoryName={setCategoryName} />}   />
         <Route path='/categories/:category' element = {<Categories categoryName={categoryName} setCategoryName={setCategoryName} setCart={setCart} cart={cart}/>}   />
         <Route path='/signup' element = {<SignUp/>}/>
         <Route path='/signin' element = {<SignIn currentUser={currentUser} setCurrentUser={setCurrentUser}/>}/>
+      <Route path='/orderconfirmation' element = {<OrderConfirmation currentUser={currentUser} setCart={setCart} cart={cart}/>}/>
+      <Route path='/orderhistory' element = {<PreviousOrders currentUser={currentUser}/>}/>
       </Routes> 
       </main>
       <Footer />    

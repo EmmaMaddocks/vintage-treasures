@@ -1,10 +1,33 @@
 //current items to buy
 import { useEffect } from "react";
 import ItemCard from "./ItemCard";
+import { useNavigate } from "react-router-dom";
+import FetchOrders from "./FetchOrders";
 
-function Basket({cart, setCart}) {
+
+function Basket({cart, setCart, currentUser}) {
+  const navigate = useNavigate();
 
 
+  const handleClick = (e) => {
+    e.preventDefault()    
+    cart.map((item) =>
+          fetch(`https://fc-marketplace.herokuapp.com/api/users/${currentUser}/orders`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+       "item_id": item.item_id
+          }),
+  }).then((response) => response.json())
+.then((newItem) => {
+console.log(newItem)
+})
+    )
+        navigate("/orderconfirmation");
+    
+    }
 
     return (
         <div className="basket-page">
@@ -17,7 +40,7 @@ function Basket({cart, setCart}) {
             })}
     
         </div>
-        <button className="blue-btn-lrg">Complete purchase</button>
+        <button className="blue-btn-lrg" onClick={handleClick}>Complete purchase</button>
         </div>
       );
     }

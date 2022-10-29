@@ -18,7 +18,6 @@ function Categories(props) {
     fetch(`https://fc-marketplace.herokuapp.com/api/items?category_name=${category}`)
       .then((res) => res.json())
       .then(({ items }) => {
-        console.log(items)
         setCategory(items);
       });
   }, []);

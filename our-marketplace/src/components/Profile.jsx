@@ -18,12 +18,19 @@ function Profile({currentUser, setCurrentUser}) {
             navigate("/signin");
         
         }
+
+        const orderHistory = (e) => {
+            e.preventDefault()
+                navigate("/orderhistory");
+            
+            }
         
 
 return (
 
     <div className="container">
     <h3>Welcome back {currentUser}!</h3>
+    <button onClick={orderHistory} className='blue-btn-lrg'>View Order History</button>
     <button onClick={handleClick} className='blue-btn-lrg'>Sign Out</button>
     </div>
 )
