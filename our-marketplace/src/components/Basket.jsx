@@ -2,7 +2,7 @@
 import { useEffect } from "react";
 import ItemCard from "./ItemCard";
 import { useNavigate } from "react-router-dom";
-import FetchOrders from "./FetchOrders";
+import FetchOrders from "./PastOrderCard";
 
 
 function Basket({cart, setCart, currentUser}) {

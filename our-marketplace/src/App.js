@@ -15,7 +15,7 @@ import StandardHeader from './components/StandardHeader';
 import SignIn from './components/SignIn';
 import OrderConfirmation from './components/OrderConfirmation';
 import PreviousOrders from './components/PreviouslyOrdered';
-import FetchOrders from './components/FetchOrders';
+import FetchOrders from './components/PastOrderCard';
 
 function App() {
     
